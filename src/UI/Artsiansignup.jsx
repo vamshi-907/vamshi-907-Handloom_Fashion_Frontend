@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useNavigate, Link } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import './ArtsianSignup.css';
+import './Artsiansignup.css';
 
 export default function Artisansignup() {
   const [artisan, setArtisan] = useState({
