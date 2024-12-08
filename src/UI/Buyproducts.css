@@ -1,0 +1,144 @@
+/* Container for centering the buy-products form */
+.buy-products-container-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url('../assets/customer-bg.jpg') no-repeat center center/cover;
+  position: relative;
+  overflow: hidden;
+  color: #333;
+  margin-left: 284px;
+}
+
+/* Background overlay for shading */
+.buy-products-container-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+  filter: blur(8px);
+}
+
+/* Form card style for buy-products container */
+.buy-products-container {
+  margin: 20px auto;
+  max-width: 1000px;
+  padding: 20px;
+  border-radius: 25px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  font-family: 'Arial', sans-serif;
+  width: 100%;
+  z-index: 1;
+}
+
+/* Title styling for the buy-products section */
+.buy-products-container h2 {
+  text-align: center;
+  color: #efeef4;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+/* Grid container for product cards */
+.buy-products-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(400px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .buy-products-grid {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+  }
+}
+
+/* Styling for individual product cards */
+.buy-product-card {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.2s ease-in-out, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.buy-product-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Image styling for buy-product cards */
+.buy-product-card img.product-image {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 20px;
+  margin-bottom: 15px;
+}
+
+/* Product title styling */
+.buy-product-card h3 {
+  margin: 10px 0;
+  color: #4B4376;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+/* Product price styling */
+.buy-product-card .price {
+  font-size: 1.2rem;
+  color: #ff5722;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Rating styling */
+.buy-product-card .rating {
+  color: #f39c12;
+  margin-bottom: 15px;
+}
+
+/* Add to Cart button styling */
+.buy-product-card .add-to-cart-btn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.buy-product-card .add-to-cart-btn:hover {
+  background-color: #45a049;
+}
+
+/* Error handling */
+.buy-products-container .form-error {
+  color: #d9534f;
+  font-size: 0.9rem;
+  margin-top: -10px;
+}
+
+.flying-image {
+  z-index: 1000;
+  pointer-events: none;
+}

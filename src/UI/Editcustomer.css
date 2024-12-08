@@ -1,0 +1,119 @@
+/* Container for the page */
+.edit-customer-container-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('../assets/admin-bg.jpg') no-repeat center center/cover;
+    position: relative;
+    overflow: hidden;
+    color: #333;
+    margin-left: 284px;
+}
+
+/* Background overlay for shading */
+.edit-customer-container-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+    filter: blur(8px);
+}
+
+/* Form card style for customer container */
+.edit-customer-container {
+    margin: 20px auto;
+    max-width: 1000px;
+    padding: 20px;
+    border-radius: 25px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    font-family: 'Arial', sans-serif;
+    z-index: 1;
+}
+
+/* Title styling for the customer section */
+.edit-customer-container h2 {
+    text-align: center;
+    color: #efeef4;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+/* Grid container for customer cards */
+.customers-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(400px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Customer card styling */
+.customer-card {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #FFD7C4;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s ease-in-out, box-shadow 0.3s ease;
+}
+
+/* Action buttons */
+.customer-actions {
+    margin-top: 10px;
+}
+
+.customer-actions button {
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 5px;
+}
+
+.customer-actions button:hover {
+    opacity: 0.8;
+}
+
+.customer-actions button:first-child {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.customer-actions button:last-child {
+    background-color: #FF9800;
+    color: white;
+}
+
+/* Update Form Styling */
+.update-customer-form {
+    margin-top: 20px;
+    padding: 30px;
+    border-radius: 15px;
+    background-color: #FFD7C4;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* Update Button Styling */
+.update-customer-form button {
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.update-customer-form button[type="button"] {
+    background-color: #f44336;
+}

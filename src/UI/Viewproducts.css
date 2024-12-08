@@ -1,0 +1,215 @@
+/* Container for centering the view-products form */
+.view-products-container-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Full viewport height */
+  background: url('../assets/artisan-bg.jpg') no-repeat center center/cover; /* Background image */
+  position: relative;
+  overflow: hidden;
+  color: #333;
+  margin-left: 284px;
+}
+
+/* Background overlay for shading */
+.view-products-container-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4); /* Dark overlay for the background */
+  z-index: 0; /* Behind the view products container */
+  filter: blur(8px); /* Apply blur to the background only */
+}
+
+/* Form card style for view-products container */
+.view-products-container {
+  margin: 20px auto;
+  max-width: 1000px; /* Adjusted width */
+  padding: 20px;
+  border-radius: 25px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  font-family: 'Arial', sans-serif;
+  width: 100%; /* Ensures the form takes up full width within the wrapper */
+  z-index: 1; /* On top of the background overlay */
+}
+
+/* Title styling for the view-products section */
+.view-products-container h2 {
+  text-align: center;
+  color: #efeef4; /* Consistent text color */
+  margin-bottom: 20px;
+  font-size: 1.5rem; /* Reduced font size */
+  text-transform: uppercase;
+}
+
+/* Grid container for product cards */
+/* Grid container for product cards */
+/* Grid container for product cards */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(400px, 1fr)); /* Increase the minimum size for each product card */
+  gap: 40px; /* Spacing between products */
+  max-width: 1200px; /* Set a maximum width for the grid */
+  margin: 0 auto; /* Center the grid horizontally */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .products-grid {
+    grid-template-columns: repeat(1, 1fr); /* For small screens, display 1 product per row */
+    gap: 20px; /* Reduced gap for smaller screens */
+  }
+}
+
+/* Other styles remain unchanged */
+  
+
+
+/* Styling for individual product cards */
+.product-card {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.2s ease-in-out, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.product-card:hover {
+  transform: scale(1.05); /* Slightly scale up on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Highlight on hover */
+}
+
+/* Image styling for product cards */
+/* Image styling for product cards */
+.product-card img.product-image {
+  width: 100%; /* Ensure image width fills its container */
+  height: auto; /* Maintain aspect ratio */
+  max-height: 300px; /* Set a max height to prevent large images from overflowing */
+  object-fit: cover; /* Ensure the image covers the area properly without stretching */
+  border-radius:20px;
+  margin-bottom: 15px;
+}
+
+
+/* Product title styling */
+.product-card h3 {
+  margin: 10px 0;
+  color: #4B4376; /* Consistent title color */
+  font-size: 1.4rem; /* Slightly larger font size */
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+/* Product price styling */
+.product-card .price {
+  font-size: 1.2rem;
+  color: #ff5722; /* Orange color for the price */
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Product description styling */
+.product-card p {
+  font-size: 14px;
+  color: #555;
+  margin: 5px 0;
+}
+
+/* Rating styling */
+.product-card .rating {
+  color: #f39c12; /* Gold color for stars */
+  margin-bottom: 15px;
+}
+
+/* Features field styling */
+.product-card .features {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.product-card .features strong {
+  color: #4B4376;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.product-card .features ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.product-card .features li {
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+
+/* Key Features Section Styling */
+.product-card .key-features {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.product-card .key-features h4 {
+  color: #4B4376; /* Color for "Key Features" */
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 16px; /* Larger font size for title */
+}
+
+.product-card .key-features ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.product-card .key-features li {
+  font-size: 13px;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+/* Error handling if any */
+.view-products-container .form-error {
+  color: #d9534f; /* Error color */
+  font-size: 0.9rem;
+  margin-top: -10px;
+}
+
+@media (max-width: 768px) {
+  .view-products-container {
+      padding: 15px;
+      max-width: 90%;
+  }
+
+  .view-products-container h2 {
+      font-size: 1.3rem;
+  }
+
+  .product-card {
+      font-size: 0.9rem; /* Adjust size of product card */
+  }
+
+  .product-card img.product-image {
+    height: 180px; /* Slightly smaller image on smaller screens */
+  }
+
+  .product-card .features {
+    padding-left: 10px; /* Adjust padding for mobile */
+  }
+}

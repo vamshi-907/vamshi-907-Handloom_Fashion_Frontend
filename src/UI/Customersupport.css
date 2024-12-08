@@ -1,0 +1,48 @@
+/* Container for the Support page */
+.support-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Full viewport height */
+    background: url('../assets/customer-bg.jpg') no-repeat center center/cover; /* Background image */
+    position: relative;
+    overflow: hidden;
+    color: #333;
+    margin-left: 284px;
+  }
+  
+  /* Styling the navbar */
+  .support-navbar {
+    width: 100%;
+    background-color: #4CAF50; /* Green background */
+    padding: 15px;
+    color: white;
+    text-align: center;
+  }
+  
+  /* Heading styling */
+  .support-container h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Styling for the iframe form */
+  .support-container iframe {
+    width: 80%;
+    max-width: 1200px;
+    height: 800px; /* Increased height */
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Responsiveness: Adjust iframe size for smaller screens */
+  @media (max-width: 768px) {
+    .support-container iframe {
+      width: 90%;
+      height: 600px;
+    }
+  }
+  

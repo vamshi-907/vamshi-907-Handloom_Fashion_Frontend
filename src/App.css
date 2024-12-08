@@ -1,0 +1,46 @@
+.app-container {
+  display: flex;
+}
+
+.app-container.shifted .content {
+  margin-left: 250px; /* Adjust this value based on your navbar width */
+}
+
+.navbar-container {
+  font-family: 'Arial', sans-serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  background: #FFD7C4;
+  color: #4B4376;
+  padding: 20px;
+  height: 100vh;
+  border-radius: 0 10px 10px 0;
+  transform: translateX(-250px);
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.navbar-container.open {
+  transform: translateX(0);
+}
+
+/* Additional styling for the toggle button */
+.toggle-btn {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  z-index: 10;
+  background-color: #4B4376;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.5em;
+}

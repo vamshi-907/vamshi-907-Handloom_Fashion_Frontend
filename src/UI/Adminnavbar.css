@@ -1,0 +1,99 @@
+.admin-navbar-container {
+    font-family: 'Arial', sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    background: #FFD7C4;
+    color: #4B4376;
+    padding: 20px;
+    height: 100vh;
+    border-radius: 0 10px 10px 0;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    z-index: 5;
+  }
+  
+  .admin-content {
+    margin-left: 250px;
+    transition: margin-left 0.3s ease-in-out;
+  }
+  
+  .admin-project-name {
+    font-size: 2em;
+    font-weight: bold;
+    color: #4B4376;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    padding-left: 40px;
+  }
+  
+  .admin-nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: auto; /* Push the auth buttons to the bottom */
+  }
+  
+  .admin-nav-links a {
+    text-decoration: none;
+    color: #4B4376;
+    background-color: #FFD7C4;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 1.2em;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .admin-nav-links a:hover {
+    background-color: #d6a27d;
+    transform: translateX(10px);
+  }
+  
+  .admin-auth-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px; /* Adjust bottom spacing */
+  }
+  
+  .admin-auth-buttons button {
+    background-color: #4B4376;
+    color: #fff;
+    padding: 15px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.5s;
+  }
+  
+  .admin-auth-buttons .login-btn:hover {
+    background-color: #3a3560;
+  }
+  
+  .admin-auth-buttons .signup-btn {
+    background-color: #f0a05a;
+  }
+  
+  .admin-auth-buttons .signup-btn:hover {
+    background-color: #c68348;
+  }
+  
+  .admin-userprofile-btn {
+    margin-top: auto; /* Push the user profile button to the bottom */
+    background-color: #4B4376;
+    color: white;
+    padding: 15px;
+    border-radius: 50px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.5s;
+  }
+  
+  .admin-userprofile-btn:hover {
+    background-color: #3a3560;
+  }
+  

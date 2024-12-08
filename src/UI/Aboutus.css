@@ -1,0 +1,118 @@
+/* Container for the About Us page */
+.aboutus-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('../assets/admin-bg.jpg') no-repeat center center/cover;
+    position: relative;
+    overflow: hidden;
+    color: #333;
+    margin-left: 284px;
+  }
+  
+  /* Overlay for shading */
+  .aboutus-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+    filter: blur(8px);
+  }
+  
+  /* Main content container */
+  .aboutus-content {
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    z-index: 1;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  /* Title */
+  .aboutus-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #4CAF50;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  
+  /* Subtitle */
+  .aboutus-subtitle {
+    font-size: 1.8rem;
+    color: #333;
+    margin-top: 20px;
+  }
+  
+  /* Description paragraphs */
+  .aboutus-description {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+    text-align: justify;
+  }
+  
+  /* List items for "Why Choose Us" section */
+  .aboutus-list {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+  }
+  
+  .aboutus-list li {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  /* Button for action */
+  .aboutus-action {
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .aboutus-button {
+    padding: 12px 25px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .aboutus-button:hover {
+    background-color: #45a049;
+  }
+  
+  @media screen and (max-width: 768px) {
+    /* Adjust content layout for smaller screens */
+    .aboutus-content {
+      padding: 20px;
+      font-size: 0.9rem;
+    }
+  
+    .aboutus-title {
+      font-size: 2rem;
+    }
+  
+    .aboutus-subtitle {
+      font-size: 1.5rem;
+    }
+  
+    .aboutus-button {
+      padding: 10px 20px;
+      font-size: 1rem;
+    }
+  }
+  

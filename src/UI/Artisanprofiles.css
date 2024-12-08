@@ -1,0 +1,60 @@
+.artisanprofiles-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('../assets/customer-bg.jpg') no-repeat center center/cover;
+    position: relative;
+    overflow: hidden;
+    color: #4B4376;
+    padding: 20px;
+    margin-left: 284px;
+  }
+  
+  .page-title {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    color: #4B4376;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  
+  .artisan-card {
+    background-color: #FFD7C4;
+    padding: 25px;
+    margin: 20px 0;
+    max-width: 700px;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .artisan-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .artisan-title {
+    font-size: 2em;
+    margin-bottom: 15px;
+    color: #4B4376;
+    border-bottom: 2px solid #d6a27d;
+    padding-bottom: 5px;
+  }
+  
+  .artisan-description {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #4B4376;
+  }
+  
+  .artisan-image {
+    width: 100%;
+    max-height: 350px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  

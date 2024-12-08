@@ -1,0 +1,143 @@
+/* Container for centering the form */
+.add-product-container-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Full viewport height */
+    background: url('../assets/artisan-bg.jpg') no-repeat center center/cover; /* Background image */
+    position: relative;
+    overflow: hidden;
+    color: #333;
+    margin-left: 284px;
+}
+
+/* Background overlay for shading */
+.add-product-container-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4); /* Dark overlay for the background */
+    z-index: 0; /* Behind the form */
+    filter: blur(8px); /* Apply blur to the background only */
+}
+
+/* Form card style */
+.add-product-container {
+    margin: 20px auto;
+    max-width: 500px; /* Decreased the width of the card */
+    padding: 20px; /* Reduced padding */
+    border-radius: 25px;
+    background-color: #F3D1C1; /* Matching the artisan home background */
+    box-shadow: 0 6px 12px rgba(0, 0, 0.15, 0.15);
+    font-family: 'Arial', sans-serif;
+    width: 100%; /* Ensures the form takes up full width within the wrapper */
+    z-index: 1; /* On top of the background overlay */
+}
+
+/* Other styles remain the same */
+.add-product-container h2 {
+    text-align: center;
+    color: #4B4376; /* Consistent text color */
+    margin-bottom: 20px; /* Reduced margin */
+    font-size: 1.5rem; /* Reduced font size */
+    text-transform: uppercase;
+}
+
+.add-product-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Reduced spacing between fields */
+}
+
+.add-product-container label {
+    font-size: 0.9rem; /* Reduced label font size */
+    font-weight: bold;
+    color: #4B4376; /* Consistent label text color */
+    margin-bottom: 5px; /* Reduced margin */
+}
+
+.add-product-container input,
+.add-product-container textarea {
+    width: 95%; /* Reduced width of fields */
+    padding: 10px; /* Reduced padding */
+    font-size: 0.9rem; /* Reduced font size */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #ffffff;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    margin-right: 10%; /* Adds space on the right side */
+}
+
+.add-product-container textarea {
+    resize: vertical;
+    min-height: 80px; /* Reduced minimum height */
+}
+
+.add-product-container input:focus,
+.add-product-container textarea:focus {
+    outline: none;
+    border-color: #4B4376;
+    box-shadow: 0 0 8px rgba(75, 67, 118, 0.4);
+}
+
+.add-product-container button {
+    padding: 12px 18px; /* Reduced padding */
+    font-size: 1rem; /* Reduced font size */
+    font-weight: bold;
+    color: white;
+    background-color: #4B4376; /* Button color */
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    text-transform: uppercase;
+}
+
+.add-product-container button:hover {
+    background-color: #3a3560; /* Slightly darker hover color */
+    transform: scale(1.05);
+}
+
+.add-product-container button:active {
+    transform: scale(0.95);
+}
+
+.add-product-container input::placeholder,
+.add-product-container textarea::placeholder {
+    font-style: italic;
+    color: #999;
+}
+
+.add-product-container .form-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.add-product-container .form-field span {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.add-product-container .form-error {
+    color: #d9534f; /* Error color */
+    font-size: 0.9rem;
+    margin-top: -10px;
+}
+
+@media (max-width: 768px) {
+    .add-product-container {
+        padding: 15px;
+        max-width: 90%;
+    }
+
+    .add-product-container h2 {
+        font-size: 1.3rem;
+    }
+
+    .add-product-container button {
+        font-size: 1rem;
+    }
+}
